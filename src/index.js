@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './container/App';
+import React from "react";
+import ReactDOM from "react-dom";
+import AppRoute from "./Routes/AppRoute";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppRoute />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

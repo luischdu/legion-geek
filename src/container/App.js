@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import CardNoticias from "../components/CardNoticias";
+
+
 
 const App = () => {
-    return (
-        <div>
-            <h1>Legion Geek V.1.0</h1>
-        </div>
-    )
-}
+  return (
+    <div>
+      <CardNoticias/>
+    </div>
+  );
+};
 
-export default App
+export default App;
