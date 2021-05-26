@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <div>
+    <div className=''>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
@@ -23,48 +23,50 @@ const Header = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">
-                  Home
+                  Inicio
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Link
+                <Link className="nav-link active" to="/conocenos">
+                  Conocenos
                 </Link>
               </li>
               <li className="nav-item dropdown">
                 <Link
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle active"
                   to="/"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Cursos
                 </Link>
 
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <Link className="dropdown-item" to="/">
-                      Action
+                    <Link className="dropdown-item" to="/cursos">
+                      Cursos internos
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/">
-                      Another action
+                      Cursos externos
                     </Link>
                   </li>
                   <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
                     <Link className="dropdown-item" to="/">
-                      Something else here
+                      Becas
                     </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
+                <Link className="nav-link active" to="/empleos">
+                  Empleos
+                </Link>
+              </li>
+              <li className="nav-item active">
                 <Link
                   className="nav-link"
                   to="/login"
