@@ -2,11 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <div className=''>
+    <div className="">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            Legion Geek
+            <img
+              src="https://i.imgur.com/W5xsOak.png"
+              alt=""
+              width="120"
+              height="60"
+            />
           </Link>
           <button
             className="navbar-toggler"
@@ -70,7 +75,7 @@ const Header = () => {
                 <Link
                   className="nav-link"
                   to="/login"
-                  tabindex="-1"
+                  tabIndex="-1"
                   aria-disabled="true"
                 >
                   Login

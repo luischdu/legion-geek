@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import VerLogin from "../pages/VerLogin";
 
 const Login = () => {
-    return (
-        <div>
-          <h1>Logeate</h1>  
-        </div>
-    )
-}
+  return (
+    <div>
+      <VerLogin />
+    </div>
+  );
+};
 
-export default Login
+export default Login;
