@@ -11,11 +11,15 @@ const Empleate = () => {
       <div>
         <MenuCategoriaEmpleo />
         <hr></hr>
+        <div className="row justify-content-start">
         {
             db.map((item)=>(
+              <div className="col-md-4">
                 <VerCardEmpleo item={item}/>
+                </div>
             ))
         }
+        </div>
       </div>
     </div>
   );

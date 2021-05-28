@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const VerCardEmpleo = ({ item }) => {
   return (
     <Link to={`/empleos/${item.id}`}>
-      <div>
+      <div className="">
         <div className="card mb-3" style={{ maxWidth: "540px" }}>
           <div className="row g-0">
             <div className="col-md-4">

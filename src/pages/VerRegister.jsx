@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Main = styled.main`
+  max-width: 500px;
+  margin: 0 auto;
+`
 
 const VerRegister = () => {
   return (
     <div>
-      <main className="form-signin">
+      <Main className="form-signin d-flex justify-content-center">
         <form className="text-center">
           <img
             className="mb-4"
@@ -60,7 +66,7 @@ const VerRegister = () => {
           </div>
           <p className="mt-5 mb-3 text-muted">&copy; 2021</p>
         </form>
-      </main>
+      </Main>
     </div>
   );
 };

@@ -1,10 +1,17 @@
 import React from "react";
 import "../styles/style.css";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Main = styled.main`
+  max-width: 500px;
+  margin: 0 auto;
+`
+
 
 const VerLogin = () => {
   return (
-    <main className="form-signin">
+    <Main className="form-signin d-flex justify-content-center">
       <form className="text-center">
         <img
           className="mb-4"
@@ -42,7 +49,7 @@ const VerLogin = () => {
         </button>
         <p className="mt-5 mb-3 text-muted">&copy; 2021</p>
       </form>
-    </main>
+    </Main>
   );
 };
 
