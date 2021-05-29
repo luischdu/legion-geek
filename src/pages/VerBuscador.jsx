@@ -3,7 +3,7 @@ import React from "react";
 const VerBuscador = () => {
   return (
     <div>
-      <nav className="navbar navbar-light bg-light">
+      <nav className="navbar navbar-light">
         <div className="container-fluid">
           <form className="d-flex">
             <input

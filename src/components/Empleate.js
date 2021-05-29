@@ -2,7 +2,7 @@ import React from "react";
 import VerCardEmpleo from "../pages/VerCardEmpleo";
 import Buscador from "./Buscador";
 import MenuCategoriaEmpleo from "./MenuCategoriaEmpleo";
-import {db} from '../dbPruebas'
+import { db } from "../dbPruebas";
 const Empleate = () => {
   return (
     <div>
@@ -11,11 +11,13 @@ const Empleate = () => {
       <div>
         <MenuCategoriaEmpleo />
         <hr></hr>
-        {
-            db.map((item)=>(
-                <VerCardEmpleo item={item}/>
-            ))
-        }
+        <div className="row justify-content-start">
+       {/*    {db.map((item, index) => (
+            <div className="col-md-4">
+              <VerCardEmpleo key={item.id} item={item} />
+            </div>
+          ))} */}
+        </div>
       </div>
     </div>
   );
