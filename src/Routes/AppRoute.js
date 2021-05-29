@@ -6,6 +6,7 @@ import Cursos from "../components/Cursos";
 import Empleate from "../components/Empleate";
 import EmpleoId from "../components/EmpleoId";
 import Login from "../components/Login";
+import PerfilUsuario from "../components/PerfilUsuario";
 import Registro from "../components/Registro";
 import Header from "../pages/Header";
 import VerConocenos from "../pages/VerConocenos";
@@ -22,7 +23,25 @@ const AppRoute = () => {
         <Route exact path="/empleos/:id" component={EmpleoId} />
         <Route exact path="/cursos" component={Cursos} />
         <Route exact path="/conocenos" component={VerConocenos} />
+        <Route exact path="/perfil" component={PerfilUsuario} />
       </Switch>
+{/*   <Switch>
+          <PublicRouter
+            path="/auth"
+            component={AuthRouter}
+            isAuthenticated={isLoggedIn}
+          />
+
+          <PriveteRouter
+            exact
+            path="/"
+            component={JournalScreen}
+            isAuthenticated={isLoggedIn}
+          />
+
+          <Redirect to="/auth/login" />
+        </Switch> */}
+
     </Router>
   );
 };
