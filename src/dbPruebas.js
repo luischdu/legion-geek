@@ -1,31 +1,31 @@
 export const db = [
     {
       id: "1",
-      img: "https://cdn.xl.thumbs.canstockphoto.es/bondadoso-relojes-inter%C3%A9s-gato-imagen-comercialmente-disponible_csp53200067.jpg",
-      title: "Gato bonachon 1",
+      img: "https://www.misiontic2022.gov.co/746/articles-172570_foto_marquesina.jpg",
+      title: "Mision TIC 2022",
       description:
-        "El gaton bonachon come galletas con leche alqueria todos los dias",
+        "Mercado Libre y Rappi le apuestan al talento de Misión TIC con la contratación de egresados",
     },
     {
       id: "2",
-      img: "https://estaticos.delooks.es/uploads/images/gallery/5a01986d5bafe8fd4c3c986b/gatos_0.jpg",
-      title: "Gato bonachon 2",
+      img: "https://www.mintic.gov.co/portal/715/articles-176141_foto_marquesina.jpg",
+      title: "Convocatoria",
       description:
-        "El gaton bonachon come galletas con leche alqueria todos los dias",
+        "Inicia convocatoria de MinTIC para apoyar la transformación digital de medios de comunicación",
     },
     {
       id: "3",
-      img: "https://i.ytimg.com/vi/O74TAJNR9Sw/hqdefault.jpg",
-      title: "Gato bonachon 3",
+      img: "https://www.mintic.gov.co/portal/715/articles-176075_foto_marquesina.png",
+      title: "IPv6",
       description:
-        "El gaton bonachon come galletas con leche alqueria todos los dias",
+        "Ministerio TIC expide resolución que modifica los lineamientos para la adopción del protocolo IPv6",
     },
     {
       id: "4",
-      img: "https://i.ytimg.com/vi/RVkLizoKlxo/maxresdefault.jpg",
-      title: "Gato bonachon 4",
+      img: "https://www.mintic.gov.co/portal/715/articles-176158_foto_marquesina.png",
+      title: "DS4ALL",
       description:
-        "El gaton bonachon come galletas con leche alqueria todos los dias",
+        "Ya iniciaron clases los próximos 620 científicos de datos que certificará el Ministerio TIC",
     },
   ];
   

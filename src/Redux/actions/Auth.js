@@ -78,3 +78,14 @@ export const startLoginEmailPassword = (email, password) => {
       });
   };
 };
+
+export const logout = () => ({
+  type: types.logout,
+});
+
+export const startLogout = () => {
+  return (dispatch) => {
+    firebase.auth().signOut();
+    dispatch(logout());
+  };
+};

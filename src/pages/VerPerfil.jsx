@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-const VerPerfil = () => {
-    return (
-        <div>
-            <h1>Hola soy tu perfil bienvenido guap@</h1>
-        </div>
-    )
-}
 
-export default VerPerfil
+const VerPerfil = ({handleLogout, userNameFromData}) => {
+  return (
+    <div>
+      <h1>Hola soy tu perfil bienvenido {userNameFromData}</h1>
+      <Link to='/login'>
+      <div
+        className="w-100 btn btn-lg  btn-outline-danger mt-3"
+        onClick={handleLogout}
+      >
+        Cerrar sesion
+      </div>
+      </Link>
+    </div>
+  );
+};
+
+export default VerPerfil;
