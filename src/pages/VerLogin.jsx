@@ -71,7 +71,7 @@ const VerLogin = ({
         </div>
 
         <div className="checkbox  mt-3 mb-3">
-          <Link to="/registro">No tengo cuanta</Link>
+          <Link to="/registro">No tengo cuenta</Link>
         </div>
         <p className="mt-5 mb-3 text-muted">&copy; 2021</p>
       </form>
