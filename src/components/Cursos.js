@@ -10,7 +10,7 @@ const Cursos = () => {
       <div className="row justify-content-start">
         {db.map((item) => (
           <div className="col-md-4">
-            <VerCardCurso item={item} />
+            <VerCardCurso key={item.id} item={item} />
           </div>
         ))}
       </div>

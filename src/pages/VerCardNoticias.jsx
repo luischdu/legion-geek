@@ -5,7 +5,7 @@ const VerCardNoticias = ({ item }) => {
   return (
     <div className="container-md mt-5">
       <div className="card mb-3" >
-        <div class="row g-0">
+        <div className="row g-0">
         <div className="col-md-4">
           <img src={item.img} className="card-img-top" alt="..." />
           </div>

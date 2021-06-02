@@ -1,10 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { store } from "./Redux/store/store";
+
 import AppRoute from "./Routes/AppRoute";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRoute />
+    <Provider store={store}>
+      <AppRoute />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

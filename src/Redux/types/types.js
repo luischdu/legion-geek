@@ -5,4 +5,5 @@ export const types = {
     uiRemoveError: "[ui] Remuve Error",
     uiStarLogin: "[ui] Start Login",
     uiFinishLogin: "[ui] Finish Login",
+    uiStopLogin: "[ui] Stop Login",
   };

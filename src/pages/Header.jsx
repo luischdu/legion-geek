@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { firebase } from "../firebase/firebase-config";
+import { login } from "../Redux/actions/Auth";
+
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(async (user) => {
+      if (user?.uid) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+    });
+  }, [dispatch]);
+
   return (
     <div className="">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,12 +73,12 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/">
+                    <Link className="dropdown-item" to="/cursos">
                       Cursos externos
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/">
+                    <Link className="dropdown-item" to="/cursos">
                       Becas
                     </Link>
                   </li>
@@ -71,16 +89,30 @@ const Header = () => {
                   Empleos
                 </Link>
               </li>
-              <li className="nav-item active">
-                <Link
-                  className="nav-link"
-                  to="/login"
-                  tabIndex="-1"
-                  aria-disabled="true"
-                >
-                  Login
-                </Link>
-              </li>
+
+              {isLoggedIn ? (
+                <li className="nav-item active">
+                  <Link
+                    className="nav-link active"
+                    to="/perfil"
+                    tabIndex="-1"
+                    aria-disabled="true"
+                  >
+                    perfil
+                  </Link>
+                </li>
+              ) : (
+                <li className="nav-item active">
+                  <Link
+                    className="nav-link active"
+                    to="/login"
+                    tabIndex="-1"
+                    aria-disabled="true"
+                  >
+                    Login
+                  </Link>
+                </li>
+              )}
             </ul>
             <form className="d-flex">
               <input

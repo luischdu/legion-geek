@@ -10,7 +10,7 @@ const CardNoticias = () => {
     <div>
       <VerDestacados/>
       {db.map((item) => (
-        <VerCardNoticias item={item} />
+        <VerCardNoticias key={item.id} item={item} />
       ))}
     </div>
   );
