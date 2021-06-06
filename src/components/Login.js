@@ -7,6 +7,13 @@ import {
   startLoginEmailPassword,
   startGoogleLogin,
 } from "../Redux/actions/Auth";
+import styled from "styled-components";
+
+const Container = styled.div`
+  
+ 
+`
+
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -30,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <Container>
       <VerLogin
         email={email}
         password={password}
@@ -39,7 +46,7 @@ const Login = () => {
         handleGoogle={handleGoogle}
         loading={loading}
       />
-    </div>
+    </Container>
   );
 };
 

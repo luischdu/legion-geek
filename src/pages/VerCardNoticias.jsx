@@ -9,7 +9,7 @@ const VerCardNoticias = ({ item }) => {
       <div className="card mb-3" >
         <div className="row g-0">
         <div className="col-md-4">
-          <img src={item.img} className="card-img-top" alt="..." />
+          <img className="img-fluid" src={item.img} className="card-img-top" alt="..." />
           </div>
           <div className="col-md-8">
         <div className="card-body">
