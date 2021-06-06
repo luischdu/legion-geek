@@ -4,5 +4,9 @@
 }
 
 body {
+<<<<<<< HEAD
     background: #fff;
+=======
+    background: linear-gradient(white, #90FCF9, #7699D4 );
+>>>>>>> bfc887f3c6aa0aa231091c57331482ac2566bf3b
 }

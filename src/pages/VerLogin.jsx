@@ -8,6 +8,7 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 const Main = styled.main`
   max-width: 500px;
   margin: 0 auto;
+  background: white;
 `;
 
 const VerLogin = ({
@@ -19,7 +20,7 @@ const VerLogin = ({
   loading,
 }) => {
   return (
-    <Main className="form-signin d-flex justify-content-center">
+    <Main className="form-signin d-flex justify-content-center rounded">
       <form className="text-center" onSubmit={handleLogin}>
         <img
           className="mb-4"

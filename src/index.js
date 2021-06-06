@@ -6,6 +6,9 @@ import './styles/style.css'
 
 import AppRoute from "./Routes/AppRoute";
 
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
