@@ -5,11 +5,11 @@ import VerCursos from "../pages/VerCursos";
 
 const Cursos = () => {
   return (
-    <div>
+    <div className="container-md">
       <VerCursos />
-      <div className="row justify-content-start">
+      <div className="row justify-content-between">
         {db.map((item) => (
-          <div className="col-md-4">
+          <div className="col-md-4 mt-3 px-5">
             <VerCardCurso key={item.id} item={item} />
           </div>
         ))}

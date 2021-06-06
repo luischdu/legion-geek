@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 const VerConocenos = () => {
   return (
-    <div className="row container">
-      <div className="col-lg-4">
+    <div className="container-md">
+    <div className="row align-items-center ">
+      <div className="col-lg-4 justify-content-center">
   {/*       <img
           className="bd-placeholder-img rounded-circle"
           width="140"
@@ -88,6 +89,7 @@ const VerConocenos = () => {
           </a>
         </p>
       </div>
+    </div>
     </div>
   );
 };
