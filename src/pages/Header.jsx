@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <div className="">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-white bg-white">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <img
