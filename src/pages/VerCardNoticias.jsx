@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
+
 const VerCardNoticias = ({ item }) => {
   return (
-    <div className="container-md mt-5">
+    <div className="container-md mt-3 ">
       <div className="card mb-3" >
         <div className="row g-0">
         <div className="col-md-4">
