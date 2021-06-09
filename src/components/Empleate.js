@@ -5,7 +5,7 @@ import MenuCategoriaEmpleo from "./MenuCategoriaEmpleo";
 import { db } from "../dbPruebas";
 const Empleate = () => {
   return (
-    <div>
+    <div className="container-md">
       <h1>Empleos</h1>
       <Buscador />
       <div>

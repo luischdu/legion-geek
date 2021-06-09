@@ -2,8 +2,8 @@ import React from 'react'
 
 const VerDestacados = () => {
     return (
-        <div className='container-md'>
-            <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
+        <div className='container'>
+            <div id="carouselExampleCaptions" className="carousel slide " data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -13,22 +13,22 @@ const VerDestacados = () => {
                     <div className="carousel-item active">
                         <img src="https://www.misiontic2022.gov.co/746/articles-172570_foto_marquesina.jpg" className="d-block w-100" alt="..."/>
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>Gatos Bonachones al Ataque</h5>
-                                <p>Gatos Bonachones inundan con su ternura a todo un pais!!</p>
+                                <h5></h5>
+                                <p></p>
                             </div>
                     </div>
                         <div className="carousel-item">
                             <img src="https://www.mintic.gov.co/portal/715/articles-176141_foto_marquesina.jpg" className="d-block w-100" alt="..."/>
                                 <div className="carousel-caption d-none d-md-block">
-                                    <h5>Los Bonachones en su ultimo Hit</h5>
-                                    <p>Famoso Grupo Gato Bonachon con su interpretacion de Bongos, deslumbra en su ultimo concierto.</p>
+                                    <h5></h5>
+                                    <p></p>
                                 </div>
                         </div>
                             <div className="carousel-item">
                                 <img src="https://www.mintic.gov.co/portal/715/articles-176075_foto_marquesina.png" className="d-block w-100" alt="..."/>
                                     <div className="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>Some representative placeholder content for the third slide.</p>
+                                        <h5></h5>
+                                        <p></p>
                                     </div>
                             </div>
                             </div>

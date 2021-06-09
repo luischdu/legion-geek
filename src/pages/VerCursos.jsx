@@ -2,45 +2,45 @@ import React from "react";
 
 const VerCursos = () => {
   return (
-    <div>
-      <h1>Cursos</h1>
-      <div>
+    <div className="text-center"> 
+      <h1 className="text-start">Cursos</h1>
+      <div className="mb-4">
       <div
-        class="btn-group"
+        className="btn-group"
         role="group"
         aria-label="Basic radio toggle button group"
       >
         <input
           type="radio"
-          class="btn-check"
+          className="btn-check"
           name="btnradio"
           id="btnradio1"
-          autocomplete="off"
+          autoComplete="off"
           checked
         />
-        <label class="btn btn-outline-primary" for="btnradio1">
+        <label className="btn btn-outline-primary" for="btnradio1">
           Cursos propios
         </label>
 
         <input
           type="radio"
-          class="btn-check"
+          className="btn-check"
           name="btnradio"
           id="btnradio2"
-          autocomplete="off"
+          autoComplete="off"
         />
-        <label class="btn btn-outline-primary" for="btnradio2">
+        <label className="btn btn-outline-primary" for="btnradio2">
           Cursos externos
         </label>
 
         <input
           type="radio"
-          class="btn-check"
+          className="btn-check"
           name="btnradio"
           id="btnradio3"
-          autocomplete="off"
+          autoComplete="off"
         />
-        <label class="btn btn-outline-primary" for="btnradio3">
+        <label className="btn btn-outline-primary" for="btnradio3">
           Becas
         </label>
       </div>

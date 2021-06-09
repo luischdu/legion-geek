@@ -19,12 +19,12 @@ import Login from "../components/Login";
 import Registro from "../components/Registro";
 import VerConocenos from "../pages/VerConocenos";
 import PerfilUsuario from "../components/PerfilUsuario";
+import Noticias from '../pages/Noticias'
 
 import PublicRouter from "./PublicRouter";
 import PriveteRouter from "./PrivateRouter";
 import VerFooter from "../pages/verFooter";
-
-
+import Article from "../pages/Article";
 
 const AppRoute = () => {
   const [checking, setChecking] = useState(true);
@@ -48,7 +48,7 @@ const AppRoute = () => {
     <Router>
       <Header />   
       <Switch>
-        <Route exact path="/" component={CardNoticias} />
+        <Route exact path="/" component={Noticias} />
         <PublicRouter
           exact
           path="/login"
@@ -60,6 +60,7 @@ const AppRoute = () => {
         <Route exact path="/empleos/:id" component={EmpleoId} />
         <Route exact path="/cursos" component={Cursos} />
         <Route exact path="/conocenos" component={VerConocenos} />
+        <Route exact path="/article/:id" component={Article} />
    
         <PriveteRouter
           exact

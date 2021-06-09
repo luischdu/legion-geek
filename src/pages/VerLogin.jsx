@@ -9,6 +9,7 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 const Main = styled.main`
   max-width: 500px;
   margin: 0 auto;
+  background: white;
 `;
 
 const VerLogin = ({

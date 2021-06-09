@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const VerCardCurso = ({ item }) => {
   return (
-    <div>
+    <div >
       <Link to={`/cursos/${item.id}`}>
         <div className="card" style={{ width: "18rem" }}>
           <img src={item.img} className="card-img-top" alt="..." />
