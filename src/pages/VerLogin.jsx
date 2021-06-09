@@ -3,7 +3,7 @@ import "../styles/style.css";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const Main = styled.main`
   max-width: 500px;
@@ -17,6 +17,7 @@ const VerLogin = ({
   handleLogin,
   handleGoogle,
   loading,
+  handleFacebook,
 }) => {
   return (
     <Main className="form-signin d-flex justify-content-center">
@@ -68,6 +69,13 @@ const VerLogin = ({
           disabled={loading}
         >
           <FontAwesomeIcon icon={faGoogle} /> Iniciar sesión con google
+        </div>
+        <div
+          className="w-100 btn btn-lg  btn-outline-info mt-3"
+          onClick={handleFacebook}
+          disabled={loading}
+        >
+          <FontAwesomeIcon icon={faFacebook} /> Iniciar sesión con Facebook
         </div>
 
         <div className="checkbox  mt-3 mb-3">

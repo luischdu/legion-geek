@@ -6,6 +6,7 @@ import { useForm } from "../Hooks/useForm";
 import {
   startLoginEmailPassword,
   startGoogleLogin,
+  startFacebookLogin
 } from "../Redux/actions/Auth";
 
 const Login = () => {
@@ -28,6 +29,9 @@ const Login = () => {
   const handleGoogle = () => {
     dispatch(startGoogleLogin());
   };
+  const handleFacebook = () => {
+    dispatch(startFacebookLogin());
+  };
 
   return (
     <div>
@@ -38,6 +42,7 @@ const Login = () => {
         handleLogin={handleLogin}
         handleGoogle={handleGoogle}
         loading={loading}
+        handleFacebook={handleFacebook}
       />
     </div>
   );
