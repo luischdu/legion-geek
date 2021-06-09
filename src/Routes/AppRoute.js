@@ -23,6 +23,7 @@ import Noticias from '../pages/Noticias'
 
 import PublicRouter from "./PublicRouter";
 import PriveteRouter from "./PrivateRouter";
+import Article from "../pages/Article";
 
 const AppRoute = () => {
   const [checking, setChecking] = useState(true);
@@ -58,12 +59,15 @@ const AppRoute = () => {
         <Route exact path="/empleos/:id" component={EmpleoId} />
         <Route exact path="/cursos" component={Cursos} />
         <Route exact path="/conocenos" component={VerConocenos} />
+        <Route exact path="/article/:id" component={Article} />
+
         <PriveteRouter
           exact
           path="/perfil"
           isAuthenticated={isLoggedIn}
           component={PerfilUsuario}
         />
+        
         <Redirect to="/" />
       </Switch>
     </Router>

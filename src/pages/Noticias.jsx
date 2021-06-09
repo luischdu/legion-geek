@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { db } from '../firebase/firebase-config'
 import { setAllArticle } from '../Redux/actions/articles'
@@ -53,13 +54,15 @@ const Noticias = () => {
             <div className="p-4 p-md-5 mb-4 text-white rounded bg-dark">
                 <div className="col-md-6 px-0">
                     <h1 className="display-4 fst-italic">Title of a longer featured blog post</h1>
-                    <p className="lead my-3">{articles[0].content}</p>
+                    <p className="lead my-3">x</p>
                     <p className="lead mb-0"><a href="#" className="text-white fw-bold">Continue reading...</a></p>
                 </div>
             </div>
 
             <div className="row mb-2">
+                
                 <div className="col-md-6">
+                <Link to={`/article/asfasd251`} >
                     <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div className="col p-4 d-flex flex-column position-static">
                             <strong className="d-inline-block mb-2 text-primary">World</strong>
@@ -72,7 +75,9 @@ const Noticias = () => {
                             <Img src="https://static.vecteezy.com/system/resources/previews/000/537/403/non_2x/vector-colorful-modern-template-with-colorful-design.jpg" alt="" />
                         </div>
                     </div>
+                    </Link>
                 </div>
+                
                 <div className="col-md-6">
                     <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div className="col p-4 d-flex flex-column position-static">
