@@ -12,6 +12,10 @@ const CardNoticias = () => {
       {db.map((item) => (
         <VerCardNoticias key={item.id} item={item} />
       ))}
+
+    <div>
+ 
+    </div>
     </div>
   );
 };

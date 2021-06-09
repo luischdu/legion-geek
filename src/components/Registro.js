@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 
 import { useForm } from "../Hooks/useForm";
 import { setError, removeError } from "../Redux/actions/uiError";
-import { startRegisterWithEmailPasswordName, startGoogleLogin } from "../Redux/actions/Auth";
+import { startRegisterWithEmailPasswordName, startGoogleLogin, startFacebookLogin } from "../Redux/actions/Auth";
 
 const Registro = () => {
   const dispatch = useDispatch();
@@ -63,6 +63,10 @@ const Registro = () => {
     dispatch(startGoogleLogin())
 }
 
+const handleFacebook = () => {
+  dispatch(startFacebookLogin());
+};
+
   return (
     <div>
       <VerRegister
@@ -73,6 +77,7 @@ const Registro = () => {
         password2={password2}
         handleInputChange={handleInputChange}
         handleGoogle = {handleGoogle}
+        handleFacebook={handleFacebook}
       />
     </div>
   );
