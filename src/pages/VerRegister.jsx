@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle} from '@fortawesome/free-brands-svg-icons'
-
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 
 const Main = styled.main`
@@ -23,84 +23,92 @@ const VerRegister = ({
   return (
     <div>
       <Main className="form-signin d-flex justify-content-center">
-        <form className="text-center" onSubmit={handleSubmit}>
-          <img
-            className="mb-4"
-            src="https://i.imgur.com/W5xsOak.png"
-            alt=""
-            width="400"
-            height="200"
-          />
-          <h1 className="h3 mb-3 fw-normal">Registro de usuario</h1>
+        <form className="text-center mt-5 p-3 border" 
+        onSubmit={handleSubmit}
+        style={{minWidth:'350px'}} >
+          
+          <h3 className="mb-3 ">Registro de usuario</h3>
+          <div className="d-flex justify-content-between mt-3 mb-3">
+          <button type="button"
+          onClick={handleGoogle}
+            style={{ 'background': '#4C8BF5' ,minWidth:'150px'}}
+            class="btn btn-primary "
+          >Google&nbsp;
+                      <FontAwesomeIcon icon={faGoogle} />
+          </button>
 
-          <div className="form-floating">
-            <input
-              type="text"
-              className="form-control"
-              id="floatingInput"
-              placeholder="Nombre y Apellido"
-              autoComplete="off"
-              name="name"
-              value={name}
-              onChange={handleInputChange}
-            />
-            <label htmlFor="floatingInput">Nombre completo</label>
-          </div>
-          <div className="form-floating">
-            <input
+          <button type="button"
+            style={{ 'background': '#3A5998', minWidth:'150px'}}
+            class="btn btn-secondary "
+          >Facebook&nbsp;
+                      <FontAwesomeIcon icon={faFacebook} />
+          </button>
+        </div>
+         
+        <div class="mb-3">
+     {/*    <label htmlFor="floatingInput">Nombre completo</label> */}
+          <input type="text"
+            class="form-control"
+            name="name"
+            value={name}
+            onChange={handleInputChange}
+            placeholder="Nombre"
+            autoComplete="off" />
+        </div>
+        
+        <div class="mb-3">
+     {/*    <label htmlFor="floatingInput">Correo electronico</label> */}
+        <input
               type="email"
               className="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
+              id="email"
+              placeholder="Correo electrónico"
               name="email"
               autoComplete="off"
               value={email}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingInput">Correo electronico</label>
-          </div>
-          <div className="form-floating">
-            <input
+        </div>
+        <div class="mb-3">
+       {/*  <label htmlFor="floatingInput">Contraseña</label> */}
+        <input
               type="password"
               className="form-control"
-              id="floatingPassword"
+              id="password"
               placeholder="Contraseña"
               name="password"
               autoComplete="off"
               value={password}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingPassword">Contraseña</label>
-          </div>
-          <div className="form-floating">
-            <input
+        </div>
+       
+        <div class="mb-3">
+        {/* <label htmlFor="floatingPassword">Verifica la Contraseña</label> */}
+        <input
               type="password"
               className="form-control"
-              id="floatingPassword"
+              id="password2"
               placeholder="Verificar contraseña"
               name="password2"
               autoComplete="off"
               value={password2}
               onChange={handleInputChange}
             />
-            <label htmlFor="floatingPassword">Verifica la Contraseña</label>
+        </div>
+  
+        <div class="d-grid gap-1">
+            <button 
+                class="btn btn-primary"
+                type="submit"> 
+                Regístrate
+                </button>
+        </div>
+        
+          <div className="checkbox mt-3 mt-3">¿Ya tienes una cuenta?&nbsp;
+            <Link to="/login">Iniciar sesión</Link>
           </div>
-
-          <button className="w-100 btn btn-lg btn-primary mt-3" type="submit">
-            Registrarse
-          </button>
-          <div
-            className="w-100 btn btn-lg  btn-outline-info mt-3"
-          
-             onClick={handleGoogle}
-          >
-           <FontAwesomeIcon icon={faGoogle} /> Registrarse con google
-          </div>
-
-          <div className="checkbox mt-3 mb-3">
-            <Link to="/login">Ya tengo una cuenta</Link>
-          </div>
-          <p className="mt-5 mb-3 text-muted">&copy; 2021</p>
+          <p className="mt-2 text-muted">&copy; 2021</p>
         </form>
       </Main>
     </div>

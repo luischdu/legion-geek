@@ -22,6 +22,9 @@ import PerfilUsuario from "../components/PerfilUsuario";
 
 import PublicRouter from "./PublicRouter";
 import PriveteRouter from "./PrivateRouter";
+import VerFooter from "../pages/verFooter";
+
+
 
 const AppRoute = () => {
   const [checking, setChecking] = useState(true);
@@ -43,7 +46,7 @@ const AppRoute = () => {
 
   return (
     <Router>
-      <Header />
+      <Header />   
       <Switch>
         <Route exact path="/" component={CardNoticias} />
         <PublicRouter
@@ -57,15 +60,19 @@ const AppRoute = () => {
         <Route exact path="/empleos/:id" component={EmpleoId} />
         <Route exact path="/cursos" component={Cursos} />
         <Route exact path="/conocenos" component={VerConocenos} />
+   
         <PriveteRouter
           exact
           path="/perfil"
           isAuthenticated={isLoggedIn}
           component={PerfilUsuario}
         />
+     
         <Redirect to="/" />
       </Switch>
+      <VerFooter/>
     </Router>
+ 
   );
 };
 

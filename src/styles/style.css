@@ -1,0 +1,51 @@
+/*Acceder, */
+.navbar {
+    font-family: "Inter-Medium",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    box-shadow: 0 2px 4px rgb(3 27 78 / 10%);
+    font-size: 14px;
+    line-height: 24px;
+    z-index: 2;
+   
+}
+
+.container-nav{
+    background: #fff;
+}
+nav a{
+    color: #031b4e !important;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .2s ease-out,blue .2s ease-out;
+}
+nav a:hover{
+
+  color: #6CC !important;
+
+}
+/*footer */
+
+.footer-style {
+    padding-top: 40px;
+    background-color: #2C3E50;
+}
+footer {
+  color: white;
+}
+footer h3 {
+  margin-bottom: 30px;
+    font-weight: 800;
+}
+footer .footer-above {
+  padding-top: 50px;
+  background-color: #2C3E50;
+}
+footer .footer-col {
+  margin-bottom: 30px;
+}
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #233140;
+}
+
+
