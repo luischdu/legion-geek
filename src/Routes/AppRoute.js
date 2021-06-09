@@ -19,6 +19,7 @@ import Login from "../components/Login";
 import Registro from "../components/Registro";
 import VerConocenos from "../pages/VerConocenos";
 import PerfilUsuario from "../components/PerfilUsuario";
+import Noticias from '../pages/Noticias'
 
 import PublicRouter from "./PublicRouter";
 import PriveteRouter from "./PrivateRouter";
@@ -45,7 +46,7 @@ const AppRoute = () => {
     <Router>
       <Header />
       <Switch>
-        <Route exact path="/" component={CardNoticias} />
+        <Route exact path="/" component={Noticias} />
         <PublicRouter
           exact
           path="/login"
