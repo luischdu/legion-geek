@@ -11,6 +11,12 @@ export const authReducer = (state = {}, action) => {
     case types.logout:
       return {};
 
+    case types.recoverPassword:
+      return {
+        ...state,
+        recover: true,
+      };
+
     default:
       return state;
   }
