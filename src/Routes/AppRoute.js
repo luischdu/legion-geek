@@ -19,7 +19,7 @@ import Login from "../components/Login";
 import Registro from "../components/Registro";
 import VerConocenos from "../pages/VerConocenos";
 import PerfilUsuario from "../components/PerfilUsuario";
-import Noticias from '../pages/Noticias'
+import Noticias from "../pages/Noticias";
 
 import PublicRouter from "./PublicRouter";
 import PriveteRouter from "./PrivateRouter";
@@ -35,7 +35,7 @@ const AppRoute = () => {
   useEffect(() => {
     firebase.auth().onAuthStateChanged(async (user) => {
       if (user?.uid) {
-        dispatch(login(user.uid, user.displayName));
+        dispatch(login(user.uid, user.displayName, user.photoURL));
         setIsLoggedIn(true);
       } else {
         setIsLoggedIn(false);
@@ -46,7 +46,7 @@ const AppRoute = () => {
 
   return (
     <Router>
-      <Header />   
+      <Header isLoggedIn={isLoggedIn} />
       <Switch>
         <Route exact path="/" component={Noticias} />
         <PublicRouter
@@ -61,19 +61,18 @@ const AppRoute = () => {
         <Route exact path="/cursos" component={Cursos} />
         <Route exact path="/conocenos" component={VerConocenos} />
         <Route exact path="/article/:id" component={Article} />
-   
+
         <PriveteRouter
           exact
           path="/perfil"
           isAuthenticated={isLoggedIn}
           component={PerfilUsuario}
         />
-     
+
         <Redirect to="/" />
       </Switch>
-      <VerFooter/>
+      <VerFooter />
     </Router>
- 
   );
 };
 

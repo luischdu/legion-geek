@@ -6,9 +6,11 @@ import { useForm } from "../Hooks/useForm";
 import {
   startLoginEmailPassword,
   startGoogleLogin,
-  startFacebookLogin
+  startFacebookLogin,
+  recoverPassword
 } from "../Redux/actions/Auth";
 import styled from "styled-components";
+
 
 const Container = styled.div`
   
@@ -39,6 +41,11 @@ const Login = () => {
   const handleFacebook = () => {
     dispatch(startFacebookLogin());
   };
+  
+  const handleRecover = (e) => {
+    e.preventDefault();
+    dispatch(recoverPassword(email))
+  }
 
   return (
     <Container>
@@ -50,6 +57,7 @@ const Login = () => {
         handleGoogle={handleGoogle}
         loading={loading}
         handleFacebook={handleFacebook}
+        handleRecover={handleRecover}
       />
     </Container>
   );

@@ -8,20 +8,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faUserCog} from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged(async (user) => {
-      if (user?.uid) {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
-      }
-    });
-  }, [dispatch]);
+const Header = ({isLoggedIn}) => {
 
   return (
     <>

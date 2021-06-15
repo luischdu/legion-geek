@@ -18,6 +18,17 @@ export const login = (uid, displayName, photoURL) => {
   };
 };
 
+function alerta(mensaje) {
+  Swal.fire({
+    position: "center",
+    icon: "error",
+    title: mensaje,
+    showConfirmButton: false,
+    timer: 1500,
+  });
+  
+}
+
 export const startRegisterWithEmailPasswordName = (email, password, name) => {
   return (dispatch) => {
     firebase
@@ -25,17 +36,11 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
       .createUserWithEmailAndPassword(email, password)
       .then(async ({ user }) => {
         await user.updateProfile({ displayName: name });
-        console.log('photo',user.photoURL);
+        console.log("photo", user.photoURL);
         dispatch(login(user.uid, user.displayName, user.photoURL));
       })
       .catch((e) => {
-        Swal.fire({
-          position: "center",
-          icon: "error",
-          title: `${e.message}`,
-          showConfirmButton: false,
-          timer: 1500,
-        });
+        alerta(e.message)
       });
   };
 };
@@ -46,17 +51,11 @@ export const startGoogleLogin = () => {
       .auth()
       .signInWithPopup(googleAuthProvider)
       .then(({ user }) => {
-        console.log('photo',user.photoURL);
+        console.log("photo", user.photoURL);
         dispatch(login(user.uid, user.displayName, user.photoURL));
       })
       .catch((e) => {
-        Swal.fire({
-          position: "center",
-          icon: "error",
-          title: `${e.message}`,
-          showConfirmButton: false,
-          timer: 1500,
-        });
+        alerta(e.message)
       });
   };
 };
@@ -72,13 +71,7 @@ export const startFacebookLogin = () => {
         console.log(user);
       })
       .catch((e) => {
-        Swal.fire({
-          position: "center",
-          icon: "error",
-          title: `${e.message}`,
-          showConfirmButton: false,
-          timer: 1500,
-        });
+        alerta(e.message)
       });
   };
 };
@@ -90,22 +83,49 @@ export const startLoginEmailPassword = (email, password) => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(({ user }) => {
-        console.log('photo',user.photoURL);
+        console.log("photo", user.photoURL);
         dispatch(login(user.uid, user.displayName, user.photoURL));
         dispatch(FinishLoading());
       })
       .catch((e) => {
-        Swal.fire({
-          position: "center",
-          icon: "error",
-          title: `${e.message}`,
-          showConfirmButton: false,
-          timer: 1500,
-        });
+        alerta(e.message)
         dispatch(StopLoading());
       });
   };
 };
+
+export const recover = () => ({
+  type: types.recoverPassword,
+});
+
+export const recoverPassword = (email) => {
+  return (dispatch) => {
+    return firebase
+      .auth()
+      .sendPasswordResetEmail(email)
+      .then(() => {
+       
+        dispatch(recover());
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: `Enviamos a su correo el enlace para restablecer su contraseña`,
+          showConfirmButton: false,
+          timer: 2200,
+        });
+      })
+      .catch((e) => {
+        console.log(e.message)
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: `Correo no invalido, asegurese de ingresar su dirección de correo electronico`,
+          showConfirmButton: false,
+          timer: 2000,
+        });
+      });
+  }
+}
 
 export const logout = () => ({
   type: types.logout,
@@ -114,6 +134,7 @@ export const logout = () => ({
 export const startLogout = () => {
   return (dispatch) => {
     firebase.auth().signOut();
+
     dispatch(logout());
   };
 };
