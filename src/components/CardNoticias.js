@@ -14,7 +14,7 @@ const Container = styled.div`
 const CardNoticias = () => {
   return (
     <>
-    <VerDestacados/>
+   {/*  <VerDestacados/> */}
     <Container className="container-md rounded mt-3 pt-2 pb-2">
     <TipsCategory/>
       {db.map((item) => (

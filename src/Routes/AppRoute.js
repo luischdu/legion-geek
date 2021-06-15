@@ -26,6 +26,7 @@ import PriveteRouter from "./PrivateRouter";
 import VerFooter from "../pages/verFooter";
 import Article from "../pages/Article";
 import Editor from "../pages/Editor";
+import { Home } from "../components/Home";
 
 const AppRoute = () => {
   const [checking, setChecking] = useState(true);
@@ -48,8 +49,13 @@ const AppRoute = () => {
   return (
     <Router>
       <Header isLoggedIn={isLoggedIn} />
+    
+     <div style={{minHeight:'50vh', marginTop:'60px'}}>
+
+    
       <Switch>
-        <Route exact path="/" component={Noticias} />
+        <Route exact path="/" component={Home} />
+     {/*    <Route exact path="/" component={Noticias} /> */}
         <PublicRouter
           exact
           path="/login"
@@ -72,7 +78,10 @@ const AppRoute = () => {
 
         <Redirect to="/" />
       </Switch>
-      <VerFooter />
+     
+      </div>
+      <VerFooter/>
+  
     </Router>
   );
 };

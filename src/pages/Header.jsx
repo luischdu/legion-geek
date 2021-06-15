@@ -12,7 +12,7 @@ const Header = ({isLoggedIn}) => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light p-0">
+      <nav className="navbar navbar-expand-lg navbar-light p-0 fixed-top">
         <div className="container-fluid container-nav">
           {/*  <Link className="navbar-brand" href="#">Comunidad/Geek</Link> */}
           <img src="https://i.ibb.co/cTghMbt/logo.png" width="100" alt="" />
@@ -57,7 +57,7 @@ const Header = ({isLoggedIn}) => {
                   tabIndex="-1"
                 aria-disabled="true"
                   > 
-                 Cuenta&nbsp; 
+                 Acceder&nbsp; 
                  <FontAwesomeIcon icon={faUserCircle} className="fs-4"/>
                
               </Link>)
