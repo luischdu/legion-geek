@@ -32,7 +32,7 @@ const Header = ({isLoggedIn}) => {
                 {/*    <Link className="nav-link" href="#">INICIO</Link> */}
               </li>
               <li className="nav-item">
-                <Link className="navbar-brand nav-link" to="/empleos" >Noticias</Link>
+                <Link className="navbar-brand nav-link" to="/articulos" >Articulos</Link>
               </li>
               <li className="nav-item">
                 <Link className="navbar-brand nav-link" to="/conocenos" >Conocenos</Link>

@@ -57,11 +57,10 @@ const AppRoute = () => {
           isAuthenticated={isLoggedIn}
         />
         <Route exact path="/registro" component={Registro} />
-        <Route exact path="/empleos" component={Empleate} />
-        <Route exact path="/empleos/:id" component={EmpleoId} />
+        <Route exact path="/articulos" component={Noticias} />
+        <Route exact path="/article/:id" component={Article} />
         <Route exact path="/cursos" component={Cursos} />
         <Route exact path="/conocenos" component={VerConocenos} />
-        <Route exact path="/article/:id" component={Article} />
         <Route exact path="/editor" component={Editor} />
 
         <PriveteRouter

@@ -1,14 +1,20 @@
+import Swal from "sweetalert2";
 import { db } from "../firebase/firebase-config"
 
 
 export const uploadArticle = (article) => {
     db.collection('articles')
         .add(article)
-        .then(res => {
-            console.log(res);
-        })
+        .then(
+            console.log('ok')
+        )
         .catch( e => {
-            console.log(e);
+            Swal.fire({
+                title: 'Error!',
+                text: e,
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
         })
 }
 
