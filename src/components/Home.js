@@ -4,7 +4,7 @@ import { db } from '../dbPruebas'
 import VerCardNoticias from '../pages/VerCardNoticias'
 
 import { VerHome } from '../pages/VerHome'
-import CardNoticias from './CardNoticias'
+
 
 
 export const Home = () => {
