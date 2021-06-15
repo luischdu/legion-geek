@@ -25,6 +25,7 @@ import PublicRouter from "./PublicRouter";
 import PriveteRouter from "./PrivateRouter";
 import VerFooter from "../pages/verFooter";
 import Article from "../pages/Article";
+import Editor from "../pages/Editor";
 
 const AppRoute = () => {
   const [checking, setChecking] = useState(true);
@@ -61,7 +62,8 @@ const AppRoute = () => {
         <Route exact path="/cursos" component={Cursos} />
         <Route exact path="/conocenos" component={VerConocenos} />
         <Route exact path="/article/:id" component={Article} />
-   
+        <Route exact path="/editor" component={Editor} />
+
         <PriveteRouter
           exact
           path="/perfil"
