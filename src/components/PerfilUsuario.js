@@ -13,9 +13,10 @@ const PerfilUsuario = () => {
     dispatch(startLogout());
   };
 
+  const photoProfile = useSelector(state => state.auth.photoURL)
   return (
     <div>
-      <VerPerfil handleLogout={handleLogout} userNameFromData={userNameFromData} />
+      <VerPerfil handleLogout={handleLogout} userNameFromData={userNameFromData} photoProfile={photoProfile}/>
     </div>
   );
 };
