@@ -6,6 +6,7 @@ import './styles/style.css'
 
 import AppRoute from "./Routes/AppRoute";
 
+import * as serviceWorker from './components/Services';
 
 
 
@@ -17,3 +18,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+
+serviceWorker.register();

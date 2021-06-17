@@ -12,7 +12,7 @@
     background: #fff;
 }
 nav a{
-    color: #031b4e !important;
+    color: #ad89c4 !important;
     cursor: pointer;
     text-decoration: none;
     font-weight: 500;
@@ -20,14 +20,14 @@ nav a{
 }
 nav a:hover{
 
-  color: #6CC !important;
+  color: #ad38fb !important;
 
 }
 /*footer */
 
 .footer-style {
     padding-top: 40px;
-    background-color: #2C3E50;
+    background-color:  #ad89c4;
 }
 footer {
   color: white;

@@ -27,6 +27,7 @@ import VerFooter from "../pages/verFooter";
 import Article from "../pages/Article";
 import Editor from "../pages/Editor";
 import { Home } from "../components/Home";
+import Chat from "../components/Chat";
 
 const AppRoute = () => {
   const [checking, setChecking] = useState(true);
@@ -49,39 +50,42 @@ const AppRoute = () => {
   return (
     <Router>
       <Header isLoggedIn={isLoggedIn} />
-    
-     <div style={{minHeight:'50vh', marginTop:'60px'}}>
 
-    
-      <Switch>
-        <Route exact path="/" component={Home} />
-     {/*    <Route exact path="/" component={Noticias} /> */}
-        <PublicRouter
-          exact
-          path="/login"
-          component={Login}
-          isAuthenticated={isLoggedIn}
-        />
-        <Route exact path="/registro" component={Registro} />
-        <Route exact path="/articulos" component={Noticias} />
-        <Route exact path="/article/:id" component={Article} />
-        <Route exact path="/cursos" component={Cursos} />
-        <Route exact path="/conocenos" component={VerConocenos} />
-        <Route exact path="/editor" component={Editor} />
+      <div style={{ minHeight: "50vh", marginTop: "60px" }}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          {/*    <Route exact path="/" component={Noticias} /> */}
+          <PublicRouter
+            exact
+            path="/login"
+            component={Login}
+            isAuthenticated={isLoggedIn}
+          />
+          <Route exact path="/registro" component={Registro} />
+          <Route exact path="/articulos" component={Noticias} />
+          <Route exact path="/article/:id" component={Article} />
+          <Route exact path="/cursos" component={Cursos} />
+          <Route exact path="/conocenos" component={VerConocenos} />
+          <Route exact path="/editor" component={Editor} />
 
-        <PriveteRouter
-          exact
-          path="/perfil"
-          isAuthenticated={isLoggedIn}
-          component={PerfilUsuario}
-        />
+          <PriveteRouter
+            exact
+            path="/chat"
+            isAuthenticated={isLoggedIn}
+            component={Chat}
+          />
 
-        <Redirect to="/" />
-      </Switch>
-     
+          <PriveteRouter
+            exact
+            path="/perfil"
+            isAuthenticated={isLoggedIn}
+            component={PerfilUsuario}
+          />
+
+          <Redirect to="/" />
+        </Switch>
       </div>
-      <VerFooter/>
-  
+      <VerFooter />
     </Router>
   );
 };

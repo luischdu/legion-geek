@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { firebase } from "../firebase/firebase-config";
-import { login } from "../Redux/actions/Auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import { faUserCog} from "@fortawesome/free-solid-svg-icons";
+import { faUserCog } from "@fortawesome/free-solid-svg-icons";
 
-const Header = ({isLoggedIn}) => {
+const Header = ({ isLoggedIn }) => {
 
   return (
     <>
@@ -37,49 +34,54 @@ const Header = ({isLoggedIn}) => {
               <li className="nav-item">
                 <Link className="navbar-brand nav-link" to="/conocenos" >Conocenos</Link>
               </li>
+              {isLoggedIn ? ( <li className="nav-item">
+                <Link className="navbar-brand nav-link" to="/chat" >Chat</Link>
+              </li>): null}
             </ul>
-            <div style={{fontSize:'30px'}} className="m-2">
-            {isLoggedIn ? (
-                <Link
-                className="fs-5"
-                to="/perfil"
-                tabIndex="-1"
-                aria-disabled="true" 
+            <div style={{ fontSize: '30px' }} className="m-2">
 
-                >Perfil&nbsp; 
-                 <FontAwesomeIcon icon={faUserCog} className="fs-4" />  
-    
-              </Link>
-            ) : ( 
-               <Link
-                 className="nav-link active fs-5"
+
+              {isLoggedIn ? (
+                <Link
+                  className="fs-5"
+                  to="/perfil"
+                  tabIndex="-1"
+                  aria-disabled="true"
+
+                >Perfil&nbsp;
+                  <FontAwesomeIcon icon={faUserCog} className="fs-4" />
+
+                </Link>
+              ) : (
+                <Link
+                  className="nav-link active fs-5"
                   to="/login"
                   tabIndex="-1"
-                aria-disabled="true"
-                  > 
-                 Acceder&nbsp; 
-                 <FontAwesomeIcon icon={faUserCircle} className="fs-4"/>
-               
-              </Link>)
-               }
+                  aria-disabled="true"
+                >
+                  Acceder&nbsp;
+                  <FontAwesomeIcon icon={faUserCircle} className="fs-4" />
+
+                </Link>)
+              }
 
             </div>
             <form className="d-flex">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button className="btn btn-outline-secondary" type="submit">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button className="btn btn-outline-secondary" type="submit">
                 <FontAwesomeIcon icon={faSearch} />
               </button>
-              </form>
+            </form>
 
           </div>
         </div>
       </nav>
-    
+
     </>
 
 
