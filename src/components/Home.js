@@ -1,14 +1,10 @@
 import React from "react";
-import { db } from "../dbPruebas";
-
-import VerCardNoticias from '../pages/VerCardNoticias'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleDown, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
 import { VerHome } from '../pages/VerHome'
 
 
-import { VerHome } from "../pages/VerHome";
 
 export const Home = () => {
     return (
