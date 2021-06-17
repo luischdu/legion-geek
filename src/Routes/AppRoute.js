@@ -28,6 +28,7 @@ import Article from "../pages/Article";
 import Editor from "../pages/Editor";
 import { Home } from "../components/Home";
 import Chat from "../components/Chat";
+import Conocenos from "../components/Conocenos";
 
 const AppRoute = () => {
   const [checking, setChecking] = useState(true);
@@ -65,7 +66,7 @@ const AppRoute = () => {
           <Route exact path="/articulos" component={Noticias} />
           <Route exact path="/article/:id" component={Article} />
           <Route exact path="/cursos" component={Cursos} />
-          <Route exact path="/conocenos" component={VerConocenos} />
+          <Route exact path="/conocenos" component={Conocenos} />
           <Route exact path="/editor" component={Editor} />
 
           <PriveteRouter

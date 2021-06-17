@@ -5,8 +5,13 @@ import { db } from "../firebase/firebase-config"
 export const uploadArticle = (article) => {
     db.collection('articles')
         .add(article)
-        .then(
-            console.log('ok')
+        .then(  
+            Swal.fire({
+                title: 'Exito!',
+                text: '¡El Articulo se Ha Subido Con Exito!',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })  
         )
         .catch( e => {
             Swal.fire({
@@ -15,6 +20,8 @@ export const uploadArticle = (article) => {
                 icon: 'error',
                 confirmButtonText: 'Cool'
               })
+            
+            
         })
 }
 
