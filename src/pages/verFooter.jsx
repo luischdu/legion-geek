@@ -2,25 +2,25 @@ import React from 'react'
 import { Link } from "react-router-dom";
 const VerFooter = () => {
     return (
-        <footer class="text-center footer-style mt-5">
-        <div class="container">
-            <div class="row">
-            <div class="col-md-4 footer-col">
+        <footer className="text-center footer-style mt-5">
+        <div className="container">
+            <div className="row">
+            <div className="col-md-4 footer-col">
                     <h3>Articulos recientes</h3>
-                    <ul class="list-inline">
+                    <ul className="list-inline">
                        <li>
-                           <Link>Como enviar un correo</Link>
+                           <Link to='/'>Como enviar un correo</Link>
                         </li>
                     </ul>
            </div>
 
-                <div class="col-md-4 footer-col">
+                <div className="col-md-4 footer-col">
                     <h3>Comunidad</h3>
                    
                 </div>
-                <div class="col-md-4 footer-col">
+                <div className="col-md-4 footer-col">
                     <h3>Síguenos en</h3>
-                    <ul class="list-inline">
+                    <ul className="list-inline">
                         <li>
                     Facebook
 

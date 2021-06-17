@@ -57,7 +57,7 @@ const VerConocenos = () => {
 
 
           <div className="col-lg-10">
-            <p className="lead">Me gusta la sandia, conocer nuevas personas y aprender cosas nuevas...</p>
+            <p className="lead" style={{ fontSize: '2vw', color: '#ad38fb' }}>Me gusta la sandia, conocer nuevas personas y aprender cosas nuevas...</p>
           </div>
        
 

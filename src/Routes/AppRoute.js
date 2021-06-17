@@ -11,13 +11,10 @@ import { useDispatch } from "react-redux";
 
 import Header from "../pages/Header";
 
-import CardNoticias from "../components/CardNoticias";
+
 import Cursos from "../components/Cursos";
-import Empleate from "../components/Empleate";
-import EmpleoId from "../components/EmpleoId";
 import Login from "../components/Login";
 import Registro from "../components/Registro";
-import VerConocenos from "../pages/VerConocenos";
 import PerfilUsuario from "../components/PerfilUsuario";
 import Noticias from "../pages/Noticias";
 
