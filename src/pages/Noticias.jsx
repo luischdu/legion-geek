@@ -98,7 +98,7 @@ const Noticias = () => {
                             <div className="col p-4 d-flex flex-column position-static">
                                 <strong className="d-inline-block mb-2 text-success">{hijo.categoryLabel}</strong>
                                 <h3 className="mb-0">{hijo.title}</h3>
-                                <div className="mb-1 text-muted">14 Junio 2021</div>
+                                <div className="mb-1 text-muted">18 Junio 2021</div>
                                 <p className="mb-auto">{hijo.description}</p>
                                 <Link to={`/article/${hijo.id}`} className="stretched-link">Continuar Leyendo</Link>
                             </div>
