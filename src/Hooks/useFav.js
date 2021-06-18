@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import Swal from 'sweetalert2';
 import { db } from '../firebase/firebase-config';
 
 
@@ -10,11 +11,34 @@ export const useFav = () => {
     const uid = useSelector(state => state.auth.uid)
     
     const reset = () => {
-        setValues( initialState );
+        setFavorites( initialState );
     }
-    const handleInputSave = (data) => {
-        db.collection('')
 
+    const handleInputSave = async(data) => {
+        if (data){
+            await db.collection(`favoritos/users/${uid}`)
+            .add(data)
+            .then(res => {
+                return (Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: '¡Se guardado con exito!',
+                    showConfirmButton: false,
+                    timer: 1500,
+                  }))
+            })
+            .catch(res => {
+                Swal.fire({
+                    position: "center",
+                    icon: "error",
+                    title: '¡Lo sentimos hay problemas de conexion!',
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+            }) 
+        }
+    
     }
-    return [ values, handleInputChange, reset ];
+
+    return [ favorites, setFavorites, handleInputSave ];
 }
