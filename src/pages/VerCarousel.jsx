@@ -6,7 +6,7 @@ export const VerCarousel = () => {
   <div className="carousel-inner">
    
     <div className="carousel-item active"  >
-      <img src="https://i.imgur.com/9pJjTxW.png" className="d-block w-100"  alt="..."/>
+      <img src="https://i.imgur.com/Y026v4p.png" className="d-block w-100"  alt="portada"/>
     </div>
    
   </div>

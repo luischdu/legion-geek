@@ -18,13 +18,14 @@ const Editor = () => {
     const [filesTwo, setFilesTwo] = useState("")
     const [state, setestate] = useState(false)
     const photoProfile = useSelector(state => state.auth.photoURL)
+    const userNameFromData = useSelector((state) => state.auth.name)
     const [article, setArticle] = useState({
         title: "",
         content: "",
         createDate: new Date(),
         isPublish: true,
         lastModified: new Date(),
-        createUserID: "",
+        createUserID: userNameFromData,
         description: "",
         categoryLabel: "",
         poster: "",

@@ -15,7 +15,7 @@ const VerFooter = () => {
                         <h3>Legión Geek</h3>
                         <ul className="list-inline text-center align-content-center">
                             <li>
-                                <img style={{ width: '80%' }} src='https://i.imgur.com/BWLLchP.png' />
+                                <img style={{ width: '80%' }} src='https://i.imgur.com/Zf6ls2t.png' />
                             </li>
                         </ul>
                     </div>
@@ -53,7 +53,7 @@ const VerFooter = () => {
 
                 <div className='row'>
                     <p className='col-sm'>
-                        &copy;{new Date().getFullYear()}    LEGION GEEK | <a style={{ textDecoration: 'none', color: 'white' }} href="http://shorturl.at/dhRU2" target="_blank" rel="politica de privacidad"> Politica de privacidad </a>
+                        &copy;{new Date().getFullYear()}    LEGION GEEK | <a style={{ textDecoration: 'none', color: 'white' }} href="https://drive.google.com/file/d/1lRlyC2xYfDPIeavICVRhvfLL5FL8UPz-/view?usp=sharing" target="_blank" rel="politica de privacidad"> Politica de privacidad </a>
                     </p>
                 </div>
             </div>
