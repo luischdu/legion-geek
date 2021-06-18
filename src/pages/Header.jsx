@@ -11,7 +11,7 @@ const Header = ({ isLoggedIn }) => {
       <nav className="navbar navbar-expand-lg navbar-light p-0 fixed-top">
         <div className="container-fluid container-nav">
           {/*  <Link className="navbar-brand" href="#">Comunidad/Geek</Link> */}
-          <img src="https://i.ibb.co/cTghMbt/logo.png" width="100" alt="" />
+          <img src="https://i.imgur.com/rf99qdq.png" width="100" alt="logo" />
           <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 
             <span className="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@ const Header = ({ isLoggedIn }) => {
               </li>): null}
               {isLoggedIn ? ( 
               <li className="nav-item">
-                <Link className="navbar-brand nav-link" to="/favoritos" >                  <FontAwesomeIcon icon={faHeart} className="fs-4" /></Link>
+                <Link className="navbar-brand nav-link" to="/favoritos" >Favoritos <FontAwesomeIcon icon={faHeart} className="fs-4" /></Link>
               </li>): null}
             </ul>
 
@@ -51,7 +51,7 @@ const Header = ({ isLoggedIn }) => {
                   tabIndex="-1"
                   aria-disabled="true"
 
-                >Post Noticia
+                >Agregar publicación
 
                 </Link>
               ) : (

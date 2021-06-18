@@ -15,7 +15,7 @@ const VerFooter = () => {
                         <h3>Legión Geek</h3>
                         <ul className="list-inline text-center align-content-center">
                             <li>
-                                <img style={{ width: '80%' }} src='https://i.imgur.com/9t0BcR0.png' />
+                                <img style={{ width: '80%' }} src='https://i.imgur.com/BWLLchP.png' />
                             </li>
                         </ul>
                     </div>

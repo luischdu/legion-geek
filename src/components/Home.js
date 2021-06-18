@@ -108,7 +108,7 @@ export const Home = () => {
                   Instala las aplicaciones que necesites sin ayuda de nadie.
                 </p>
               </div>
-              <div class="card-footer">
+              <div className="card-footer">
                 <div className="row align-content-center">
                   <div className="col-10">
                     <h6
@@ -164,7 +164,7 @@ export const Home = () => {
                   Envía correos como todo un genio! Es facil y muy util.
                 </p>
               </div>
-              <div class="card-footer">
+              <div className="card-footer">
                 <div className="row align-content-center">
                   <div className="col-10">
                     <h6
@@ -219,7 +219,7 @@ export const Home = () => {
                   pocos minutos.
                 </p>
               </div>
-              <div class="card-footer">
+              <div className="card-footer">
                 <div className="row align-content-center">
                   <div className="col-10">
                     <h6
@@ -247,7 +247,7 @@ export const Home = () => {
             </div>
           </div>
           {/*                 {db.map((item) => (
-                <div class="card mt-2 p-0 " style={{width: '20rem'}}>
+                <div className="card mt-2 p-0 " style={{width: '20rem'}}>
                     <img src={item.img}  className="img-fluid" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">{item.title}</h5>
