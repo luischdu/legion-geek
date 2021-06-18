@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import { faUserCog } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faUserCog, faUserCircle, faHeart } from "@fortawesome/free-solid-svg-icons";
+
 
 const Header = ({ isLoggedIn }) => {
 
@@ -34,13 +33,32 @@ const Header = ({ isLoggedIn }) => {
               <li className="nav-item">
                 <Link className="navbar-brand nav-link" to="/conocenos" >Conocenos</Link>
               </li>
-              {isLoggedIn ? ( <li className="nav-item">
+              {isLoggedIn ? ( 
+              <li className="nav-item">
                 <Link className="navbar-brand nav-link" to="/chat" >Chat</Link>
               </li>): null}
+              {isLoggedIn ? ( 
+              <li className="nav-item">
+                <Link className="navbar-brand nav-link" to="/favoritos" >                  <FontAwesomeIcon icon={faHeart} className="fs-4" /></Link>
+              </li>): null}
             </ul>
+
             <div style={{ fontSize: '30px' }} className="m-2">
+              {isLoggedIn ? (
+                <Link
+                  className="fs-5"
+                  to="/editor"
+                  tabIndex="-1"
+                  aria-disabled="true"
 
+                >Post Noticia
 
+                </Link>
+              ) : (
+                null)
+              }
+            </div>
+            <div style={{ fontSize: '30px' }} className="m-2">
               {isLoggedIn ? (
                 <Link
                   className="fs-5"
@@ -64,8 +82,8 @@ const Header = ({ isLoggedIn }) => {
 
                 </Link>)
               }
-
             </div>
+
             <form className="d-flex">
               <input
                 className="form-control me-2"

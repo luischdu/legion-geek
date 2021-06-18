@@ -49,7 +49,7 @@ const AppRoute = () => {
     <Router>
       <Header isLoggedIn={isLoggedIn} />
 
-      <div style={{ minHeight: "50vh", marginTop: "60px" }}>
+      <div style={{ minHeight: "60vh", marginTop: "60px" }}>
         <Switch>
           <Route exact path="/" component={Home} />
           {/*    <Route exact path="/" component={Noticias} /> */}
@@ -64,8 +64,19 @@ const AppRoute = () => {
           <Route exact path="/article/:id" component={Article} />
           <Route exact path="/cursos" component={Cursos} />
           <Route exact path="/conocenos" component={Conocenos} />
-          <Route exact path="/editor" component={Editor} />
-          <Route exact path="/favoritos" component={Favorites}/>
+
+          <PriveteRouter
+            exact
+            path="/editor"
+            isAuthenticated={isLoggedIn}
+            component={Editor}
+          />
+          <PriveteRouter
+            exact
+            path="/favoritos"
+            isAuthenticated={isLoggedIn}
+            component={Favorites}
+          />
           <PriveteRouter
             exact
             path="/chat"

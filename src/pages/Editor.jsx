@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import '../../node_modules/react-quill/dist/quill.snow.css';
 import { uploadArticle } from '../helpers/uploadArticle';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 
 const TextEditor = styled.div`
     padding: 25px;
@@ -16,6 +17,7 @@ const Editor = () => {
     const [files, setFiles] = useState("")
     const [filesTwo, setFilesTwo] = useState("")
     const [state, setestate] = useState(false)
+    const photoProfile = useSelector(state => state.auth.photoURL)
     const [article, setArticle] = useState({
         title: "",
         content: "",
@@ -26,7 +28,8 @@ const Editor = () => {
         description: "",
         categoryLabel: "",
         poster: "",
-        img: ""
+        img: "",
+        imgProfile: photoProfile
     })
 
     const CLOUDINARY_API = 'https://api.cloudinary.com/v1_1/romajs/image/upload'
