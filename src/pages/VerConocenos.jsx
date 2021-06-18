@@ -8,7 +8,7 @@ const Container = styled.div`
 
 const Img = styled.img`
   width: 200px;
-  height: 200px;
+  height: 250px;
   border-radius: 100%;
 `
 
@@ -49,7 +49,7 @@ const VerConocenos = () => {
 
       <div className="col-md-12 mt-5 text-center d-flex flex-wrap g-3" data-aos="fade-right">
         <div>
-          <Img src="https://i.imgur.com/fnUkbj1.png" alt='Luis foto' />
+          <Img src="https://i.imgur.com/jASSpR8.jpg" alt='Luis foto' />
           <h2>Luis Chavéz</h2>
           <p>Desarrollador Front-End</p>
           <p><a className="btn btn-warning" href="https://www.linkedin.com/in/luischdu/">Mas Informacion &raquo;</a></p>

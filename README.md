@@ -50,7 +50,7 @@ A continuación se presenta la vista de carga en un dispositivo escritorio
 ### 📱 Mobile
 A continuación se presenta la vista de carga en un dispositivo mobile
 <br></br>
-<img src='https://i.imgur.com/hUUBVH8.png' alt='main-page' width=50%>
+<img src='https://i.imgur.com/hUUBVH8.png' alt='main-page' width=30%>
 
 ## :man_technologist: Autores
 
