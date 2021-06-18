@@ -11,13 +11,9 @@ import { useDispatch } from "react-redux";
 
 import Header from "../pages/Header";
 
-import CardNoticias from "../components/CardNoticias";
 import Cursos from "../components/Cursos";
-import Empleate from "../components/Empleate";
-import EmpleoId from "../components/EmpleoId";
 import Login from "../components/Login";
 import Registro from "../components/Registro";
-import VerConocenos from "../pages/VerConocenos";
 import PerfilUsuario from "../components/PerfilUsuario";
 import Noticias from "../pages/Noticias";
 
@@ -29,6 +25,7 @@ import Editor from "../pages/Editor";
 import { Home } from "../components/Home";
 import Chat from "../components/Chat";
 import Conocenos from "../components/Conocenos";
+import Favorites from "../pages/Favorites";
 
 const AppRoute = () => {
   const [checking, setChecking] = useState(true);
@@ -68,7 +65,7 @@ const AppRoute = () => {
           <Route exact path="/cursos" component={Cursos} />
           <Route exact path="/conocenos" component={Conocenos} />
           <Route exact path="/editor" component={Editor} />
-
+          <Route exact path="/favoritos" component={Favorites}/>
           <PriveteRouter
             exact
             path="/chat"
