@@ -1,69 +1,57 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
 const Container = styled.div`
+  padding: 10% 0 10% 0;
 `
 
 const Img = styled.img`
   width: 200px;
   height: 250px;
   border-radius: 100%;
+  margin-bottom: 10px;
+`
+const Img2 = styled.img`
+  width: 172px;
+  height: 200px;
+  border-radius: 100%;
+  margin-bottom: 10px;
 `
 
 
 const VerConocenos = () => {
   return (
     <Container className="container-md pt-4 bg-white">
-
       <h2>Equipo de desarrollo</h2>
       <hr />
-
-      <div className="col-md-12 mt-5 text-center d-flex flex-wrap g-3" data-aos="fade-right">
-        <div>
+      <div className="row text-center  mt-5">
+        <div className="col-md-4 mt-5 ">
           <Img src="https://media-exp3.licdn.com/dms/image/C4E03AQEVAi3CxxMTPQ/profile-displayphoto-shrink_200_200/0/1621398283381?e=1628726400&v=beta&t=FzVEeF_syvx8SEM6k_u4NZg_VfRB5Ft0LqzEUGjvlEw" alt='Yadier foto' />
           <h2>Yadier Caicedo</h2>
-          <p>Desarrollador Front-End</p>
+          <h5>Desarrollador Front-End</h5>
+          <p>Como persona organizada y con una gran motivación, soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto.</p>
           <p><a className="btn btn-warning" href="https://www.linkedin.com/in/yadier-caicedo-150a30180/">Mas Informacion &raquo;</a></p>
         </div>
-        <div className='d-flex justify-content-center align-items-center'>
-          <p style={{ fontSize: '2vw', color: '#ad38fb' }}>Me gusta viajar, compartir con mi familia, y codear!</p>
+        <div className="col-md-4 mt-5">
+          <Img src="https://media-exp3.licdn.com/dms/image/C5603AQEaZ0BUbbPXMw/profile-displayphoto-shrink_100_100/0/1574382153077?e=1629331200&v=beta&t=zp2IMWbEAPud_nzEr6Nti5hOTouFenVsGEwt6psRRZo" alt='Jhosep foto' />
+          <h2>Jhosep Ropero</h2>
+          <h5>Scrum Master</h5>
+          <p>Me gusta enfrentar nuevos retos y dar lo mejor de mi para cumplir metas, Mis pasatiempos favoritos son ver peliculas, anime, escuchar musica y el desarrollo web. </p>
+          <p><a className="btn btn-warning" href="https://www.linkedin.com/in/jhosep-ropero/">Mas Informacion &raquo;</a></p>
         </div>
-      </div>
-
-      <div className="col-md-12 d-flex flex-row-reverse flex-wrap g-3">
-        <div>
-          <div className=" mt-5 text-center" data-aos="fade-left">
-            <Img src="https://media-exp3.licdn.com/dms/image/C5603AQEaZ0BUbbPXMw/profile-displayphoto-shrink_100_100/0/1574382153077?e=1629331200&v=beta&t=zp2IMWbEAPud_nzEr6Nti5hOTouFenVsGEwt6psRRZo" alt='Jhosep foto' />
-            <h2>Jhosep Ropero</h2>
-            <p>Desarrollador Front-End</p>
-            <p><a className="btn btn-warning" href="https://www.linkedin.com/in/jhosep-ropero/">Mas Informacion &raquo;</a></p>
-          </div>
-        </div>
-        <div className='d-flex justify-content-center align-items-center'>
-          <p style={{ fontSize: '2vw', color: '#ad38fb' }}>Me apaciona la tecnologia, jugar al baloncesto y descubrir nuevos lugares!</p>
-        </div>
-      </div>
-
-
-      <div className="col-md-12 mt-5 text-center d-flex flex-wrap g-3" data-aos="fade-right">
-        <div>
-          <Img src="https://i.imgur.com/jASSpR8.jpg" alt='Luis foto' />
+        <div className="col-md-4 mt-5">
+          <Img2 src="https://i.imgur.com/AaQUD5m.jpg" alt='Luis foto' />
           <h2>Luis Chavéz</h2>
-          <p>Desarrollador Front-End</p>
+          <h5>Product Owner</h5>
+          <p>Me gusta encontrar la manera de hacer las cosas lo más practicas posibles, es por ello que amo la tecnología porque no solo facilita nuestra vida, la transforma!
+            Me gusta leer, soy fan de Harry Potter y me encanta las frutas!</p>
           <p><a className="btn btn-warning" href="https://www.linkedin.com/in/luischdu/">Mas Informacion &raquo;</a></p>
         </div>
-
-
-          <div className="col-lg-10">
-            <p className="lead" style={{ fontSize: '2vw', color: '#ad38fb' }}>Me gusta la sandia, conocer nuevas personas y aprender cosas nuevas...</p>
-          </div>
-       
-
       </div>
 
     </Container>
+
   );
 };
 
